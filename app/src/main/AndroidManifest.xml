@@ -12,6 +12,33 @@
         android:theme="@style/Theme.2023_JuegoPizzaHut"
         tools:targetApi="31">
         <activity
+            android:name=".GeoPreg10Activity"
+            android:exported="false" />
+        <activity
+            android:name=".GeoPreg09Activity"
+            android:exported="false" />
+        <activity
+            android:name=".GeoPreg08Activity"
+            android:exported="false" />
+        <activity
+            android:name=".GeoPreg07Activity"
+            android:exported="false" />
+        <activity
+            android:name=".GeoPreg06Activity"
+            android:exported="false" />
+        <activity
+            android:name=".GeoPreg05Activity"
+            android:exported="false" />
+        <activity
+            android:name=".GeoPreg04Activity"
+            android:exported="false" />
+        <activity
+            android:name=".GeoPreg03Activity"
+            android:exported="false" />
+        <activity
+            android:name=".GeoPreg02Activity"
+            android:exported="false" />
+        <activity
             android:name=".GeoPreg01Activity"
             android:exported="false" />
         <activity

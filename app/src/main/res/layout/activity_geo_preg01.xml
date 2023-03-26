@@ -12,28 +12,37 @@
         android:layout_alignParentBottom="true">
 
         <Button
-            android:id="@+id/btnPregunta01Opc01Eco"
+            android:id="@+id/btnPregunta01Opc01Geo"
             android:layout_width="850px"
             android:layout_height="140px"
             android:layout_marginTop="270px"
             android:layout_marginLeft="105px"
             android:background="@null"/>
         <Button
-            android:id="@+id/btnPregunta01Opc02Eco"
+            android:id="@+id/btnPregunta01Opc02Geo"
             android:layout_width="850px"
             android:layout_height="140px"
             android:layout_marginTop="65px"
             android:layout_marginLeft="105px"
-            android:layout_below="@id/btnPregunta01Opc01Eco"
+            android:layout_below="@id/btnPregunta01Opc01Geo"
             android:background="@null"/>
 
         <Button
-            android:id="@+id/btnPregunta01Opc03Eco"
+            android:id="@+id/btnPregunta01Opc03Geo"
             android:layout_width="850px"
             android:layout_height="140px"
             android:layout_marginTop="70px"
             android:layout_marginLeft="105px"
-            android:layout_below="@id/btnPregunta01Opc02Eco"
+            android:layout_below="@id/btnPregunta01Opc02Geo"
+            android:background="@null"/>
+
+        <Button
+            android:id="@+id/btnPregunta01Opc04Geo"
+            android:layout_width="850px"
+            android:layout_height="140px"
+            android:layout_marginTop="70px"
+            android:layout_marginLeft="105px"
+            android:layout_below="@id/btnPregunta01Opc03Geo"
             android:background="@null"/>
 
 

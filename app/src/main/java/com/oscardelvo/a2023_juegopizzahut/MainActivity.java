@@ -5,9 +5,7 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.os.Environment;
 import android.os.Handler;
-import android.text.Html;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -15,20 +13,10 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -40,6 +28,7 @@ public class MainActivity extends Activity {
     Runnable runnable, runnable3;
     CountDownTimer x;
     String numeroRandom, texto, textoGano, item;
+    String strPreguntaSelec;
     TextView txtPremioTexto, txtGanasteTexto;
     RelativeLayout rlJuego;
     MediaPlayer mpJugar, mpR;
@@ -51,7 +40,7 @@ public class MainActivity extends Activity {
     String strCategoriaSelecc;
     int oliveGarden, johnnyRockets, universal, oldNavy;
 
-    int contadorCategorias = 0;
+    int contadorCategorias, controlMain;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +48,20 @@ public class MainActivity extends Activity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
 
+        Intent iin= getIntent();
+        Bundle b = iin.getExtras();
+
+        if(b!=null)
+        {
+            controlMain = (int) b.get("ControlPreguntas");
+            contadorCategorias = controlMain;
+            if (controlMain == 5){
+                contadorCategorias = 0;
+            }
+        }
+
+
+        Log.d("controlMain", controlMain+"");
         iniciarVariables();
         countdown();
 
@@ -68,6 +71,12 @@ public class MainActivity extends Activity {
 
                 mpJugar = MediaPlayer.create(getApplicationContext(),R.raw.game);
                 mpJugar.start();
+
+                randomGenerator = new Random();
+                int tamano=10;
+
+                int index = randomGenerator.nextInt(tamano-0)+0;
+                int indexPregSelec = index+1;
 
                 if (contadorCategorias == 0){
                     strCategoriaSelecc = "Geografia";
@@ -108,28 +117,33 @@ public class MainActivity extends Activity {
                     imgPremio.setImageResource(R.mipmap.ruleta_premio01);
                     texto = "Geografía";
                     textoGano = "GANASTE";
+                 //   strPreguntaSelec = "GeoPreg01Activity";
+                  strPreguntaSelec = "GeoPreg0"+indexPregSelec+"Activity";
                 }
             else if (strCategoriaSelecc.equals("Entretenimiento")){
                     imgPremio.setImageResource(R.mipmap.ruleta_premio09);
                     texto = "Entretenimiento";
                     textoGano = "GANASTE";
+                    strPreguntaSelec = "EntPreg0"+indexPregSelec+"Activity";
                 }
                 else if (strCategoriaSelecc.equals("PizzaHut")){
                     imgPremio.setImageResource(R.mipmap.ruleta_premio03);
                     texto = "Pizza Hut";
                     textoGano = "GANASTE";
+                    strPreguntaSelec = "PizPreg0"+indexPregSelec+"Activity";
                 }
                 else if (strCategoriaSelecc.equals("CulturaGeneral")){
                     imgPremio.setImageResource(R.mipmap.ruleta_premio05);
                     texto = "Cultura General";
                     textoGano = "GANASTE";
+                    strPreguntaSelec = "CultPreg0"+indexPregSelec+"Activity";
                 }
                 else if (strCategoriaSelecc.equals("Deportes")){
                     imgPremio.setImageResource(R.mipmap.ruleta_premio07);
                     texto = "Deportes";
-                    textoGano = "GANASTE";
+                    strPreguntaSelec = "DepPreg0"+indexPregSelec+"Activity";
                 }
-
+Log.d("Preguntas",strPreguntaSelec);
                 handler = new Handler();
                 runnable = new Runnable() {
                     @Override
@@ -162,6 +176,15 @@ public class MainActivity extends Activity {
                             }
                         };
                         handler3.postDelayed(runnable3,700);
+                        Intent preg = null;
+                        try {
+                            preg = new Intent(MainActivity.this, Class.forName("com.oscardelvo.a2023_juegopizzahut."+strPreguntaSelec));
+                        } catch (ClassNotFoundException e) {
+                            throw new RuntimeException(e);
+                        }
+                        preg.putExtra("ControlPreguntas", contadorCategorias);
+                        startActivity(preg);
+                        //   finish();
                         if(mpR.isPlaying()){
                             mpR.stop();
                             mpR.release();

@@ -12,7 +12,94 @@
         android:theme="@style/Theme.2023_JuegoPizzaHut"
         tools:targetApi="31">
         <activity
-            android:name=".EntPreg10Activity"
+            android:name=".DepPreg010Activity"
+            android:exported="false" />
+        <activity
+            android:name=".DepPreg09Activity"
+            android:exported="false" />
+        <activity
+            android:name=".DepPreg08Activity"
+            android:exported="false" />
+        <activity
+            android:name=".DepPreg07Activity"
+            android:exported="false" />
+        <activity
+            android:name=".DepPreg06Activity"
+            android:exported="false" />
+        <activity
+            android:name=".DepPreg05Activity"
+            android:exported="false" />
+        <activity
+            android:name=".DepPreg04Activity"
+            android:exported="false" />
+        <activity
+            android:name=".DepPreg03Activity"
+            android:exported="false" />
+        <activity
+            android:name=".DepPreg02Activity"
+            android:exported="false" />
+        <activity
+            android:name=".DepPreg01Activity"
+            android:exported="false" />
+        <activity
+            android:name=".CultPreg010Activity"
+            android:exported="false" />
+        <activity
+            android:name=".CultPreg09Activity"
+            android:exported="false" />
+        <activity
+            android:name=".CultPreg08Activity"
+            android:exported="false" />
+        <activity
+            android:name=".CultPreg07Activity"
+            android:exported="false" />
+        <activity
+            android:name=".CultPreg06Activity"
+            android:exported="false" />
+        <activity
+            android:name=".CultPreg05Activity"
+            android:exported="false" />
+        <activity
+            android:name=".CultPreg04Activity"
+            android:exported="false" />
+        <activity
+            android:name=".CultPreg03Activity"
+            android:exported="false" />
+        <activity
+            android:name=".CultPreg01Activity"
+            android:exported="false" />
+        <activity
+            android:name=".CultPreg02Activity"
+            android:exported="false" />
+        <activity
+            android:name=".PizPreg010Activity"
+            android:exported="false" />
+        <activity
+            android:name=".PizPreg08Activity"
+            android:exported="false" />
+        <activity
+            android:name=".PizPreg07Activity"
+            android:exported="false" />
+        <activity
+            android:name=".PizPreg06Activity"
+            android:exported="false" />
+        <activity
+            android:name=".PizPreg05Activity"
+            android:exported="false" />
+        <activity
+            android:name=".PizPreg04Activity"
+            android:exported="false" />
+        <activity
+            android:name=".PizPreg03Activity"
+            android:exported="false" />
+        <activity
+            android:name=".PizPreg02Activity"
+            android:exported="false" />
+        <activity
+            android:name=".PizPreg01Activity"
+            android:exported="false" />
+        <activity
+            android:name=".EntPreg010Activity"
             android:exported="false" />
         <activity
             android:name=".EntPreg09Activity"
@@ -42,35 +129,43 @@
             android:name=".EntPreg01Activity"
             android:exported="false" />
         <activity
-            android:name=".GeoPreg10Activity"
-            android:exported="false" />
+            android:name=".GeoPreg010Activity"
+            tools:ignore="MissingClass" />
         <activity
             android:name=".GeoPreg09Activity"
-            android:exported="false" />
+            tools:ignore="MissingClass" />
         <activity
             android:name=".GeoPreg08Activity"
-            android:exported="false" />
+            android:exported="false"
+            tools:ignore="MissingClass" />
         <activity
             android:name=".GeoPreg07Activity"
-            android:exported="false" />
+            android:exported="false"
+            tools:ignore="MissingClass" />
         <activity
             android:name=".GeoPreg06Activity"
-            android:exported="false" />
+            android:exported="false"
+            tools:ignore="MissingClass" />
         <activity
             android:name=".GeoPreg05Activity"
-            android:exported="false" />
+            android:exported="false"
+            tools:ignore="MissingClass" />
         <activity
             android:name=".GeoPreg04Activity"
-            android:exported="false" />
+            android:exported="false"
+            tools:ignore="MissingClass" />
         <activity
             android:name=".GeoPreg03Activity"
-            android:exported="false" />
+            android:exported="false"
+            tools:ignore="MissingClass" />
         <activity
             android:name=".GeoPreg02Activity"
-            android:exported="false" />
+            android:exported="false"
+            tools:ignore="MissingClass" />
         <activity
             android:name=".GeoPreg01Activity"
-            android:exported="false" />
+            android:exported="false"
+            tools:ignore="MissingClass" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

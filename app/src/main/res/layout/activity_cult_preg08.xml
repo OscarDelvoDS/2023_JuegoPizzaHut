@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="1080px"
+    android:layout_height="1920px"
+    android:background="@mipmap/fondo_cultura"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rlPregunta08"
+        android:layout_width="950px"
+        android:layout_height="1240px"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/img_geo_01"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="310px">
+
+        <Button
+            android:id="@+id/btnPregunta08Opc01Cul"
+            android:layout_width="600px"
+            android:layout_height="140px"
+            android:layout_marginTop="200px"
+            android:layout_marginLeft="105px"
+            android:background="@null"/>
+        <Button
+            android:id="@+id/btnPregunta08Opc02Cul"
+            android:layout_width="600px"
+            android:layout_height="140px"
+            android:layout_marginTop="95px"
+            android:layout_marginLeft="105px"
+            android:layout_below="@id/btnPregunta08Opc01Cul"
+            android:background="@null"/>
+
+        <Button
+            android:id="@+id/btnPregunta08Opc03Cul"
+            android:layout_width="600px"
+            android:layout_height="140px"
+            android:layout_marginTop="95px"
+            android:layout_marginLeft="105px"
+            android:layout_below="@id/btnPregunta08Opc02Cul"
+            android:background="@null"/>
+
+        <Button
+            android:id="@+id/btnPregunta08Opc04Cul"
+            android:layout_width="600px"
+            android:layout_height="140px"
+            android:layout_marginTop="90px"
+            android:layout_marginLeft="105px"
+            android:layout_below="@id/btnPregunta08Opc03Cul"
+            android:background="@null"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

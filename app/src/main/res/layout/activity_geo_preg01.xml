@@ -1,46 +1,48 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="1080px"
     android:layout_height="1920px"
-    android:background="@mipmap/fondo_econstruccion"
+    android:background="@mipmap/fondo_geografia"
     >
 
     <RelativeLayout
         android:id="@+id/rlPregunta1"
-        android:layout_width="1080px"
-        android:layout_height="1450px"
-        android:background="@mipmap/img_eco_02"
-        android:layout_alignParentBottom="true">
+        android:layout_width="950px"
+        android:layout_height="1250px"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/img_geo_01"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="350px">
 
         <Button
             android:id="@+id/btnPregunta01Opc01Geo"
-            android:layout_width="850px"
+            android:layout_width="600px"
             android:layout_height="140px"
-            android:layout_marginTop="270px"
+            android:layout_marginTop="200px"
             android:layout_marginLeft="105px"
             android:background="@null"/>
         <Button
             android:id="@+id/btnPregunta01Opc02Geo"
-            android:layout_width="850px"
+            android:layout_width="600px"
             android:layout_height="140px"
-            android:layout_marginTop="65px"
+            android:layout_marginTop="95px"
             android:layout_marginLeft="105px"
             android:layout_below="@id/btnPregunta01Opc01Geo"
             android:background="@null"/>
 
         <Button
             android:id="@+id/btnPregunta01Opc03Geo"
-            android:layout_width="850px"
+            android:layout_width="600px"
             android:layout_height="140px"
-            android:layout_marginTop="70px"
+            android:layout_marginTop="95px"
             android:layout_marginLeft="105px"
             android:layout_below="@id/btnPregunta01Opc02Geo"
             android:background="@null"/>
 
         <Button
             android:id="@+id/btnPregunta01Opc04Geo"
-            android:layout_width="850px"
+            android:layout_width="600px"
             android:layout_height="140px"
-            android:layout_marginTop="70px"
+            android:layout_marginTop="90px"
             android:layout_marginLeft="105px"
             android:layout_below="@id/btnPregunta01Opc03Geo"
             android:background="@null"/>
